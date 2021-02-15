@@ -1,0 +1,7 @@
+START TRANSACTION;
+UPDATE users set email ="mai.ibrahim@gmail.com" where id=5;
+COMMIT;
+
+
+
+/*5=idاللى ليه emailلل updateبيعمل usersدا بيعدل فى جدول  ال transactionال*/

@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getcat`(IN cid int)
+BEGIN
+
+SELECT * FROM categories WHERE cat_id=cid
+
+END
+
+*للبحث عن categoriesبال id
+

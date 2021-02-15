@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `online shopping`.`products_AFTER_INSERT` AFTER INSERT ON `products` FOR EACH ROW
+BEGIN
+UPDATE sumprices 
+SET sumOfPrices = sumOfPrices + new.productPrice;
+
+END
+
+
+/*sumOfPrices الجديد على productللpriceبيجمع ال productsلصف ف جدول ال insertبعد ال sumpricesدا بيعدل ف جدول الtriggerال*/

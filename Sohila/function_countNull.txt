@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `countNull`() RETURNS int(11)
+BEGIN
+declare counter int;
+set counter=(select count(order_id) from orders where p_status=Completed);
+RETURN counter;
+END
+
+/* Completedاللى بتساوىorderStatus الفانكشن دى بحسب عدد ال

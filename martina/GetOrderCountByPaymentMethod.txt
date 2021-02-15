@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetOrderCountByTRXID`(
+out total int
+)
+BEGIN
+	SELECT COUNT(product_id)
+	INTO total
+	FROM orders
+	WHERE trx_id = '07M47684BS5725041';
+
+END
+
+
+/*"COD"اللى ليهم طريقة دفع معينة وهياordersدى بتعد عدد الprocedureال*/

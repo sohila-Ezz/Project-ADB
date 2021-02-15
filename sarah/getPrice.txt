@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `getPrice`(pid int) RETURNS mediumtext CHARSET utf8
+BEGIN
+declare price long;
+set price=(select product_price
+from products 
+where producr_id=pid);
+RETURN price;
+END
+
+
+/*للمنتج وترجع سعرهidالفانكشن دى بتاخد ال*/

@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_Info_By_ID`(IN USER int)
+BEGIN
+SELECT user_id, email, address1 from user_info where user_id=USER
+
+/*دى بتعمل procedureال*/ بترجع الداتا بتاعت user بال id 

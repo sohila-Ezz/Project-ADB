@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `showNumOfProducts`(cat int(11),sub int(11)) RETURNS int(11)
+BEGIN
+declare total int(100);
+set total=(select count(product_id) from products where product_cat=cat&&product_title=title);
+RETURN total;
+END
+
+/*دى category ,product_titleوترجع عدد المنتجات اللى ليهم الcategory ,product_titleالفانكشن دى بتاخد ال*/

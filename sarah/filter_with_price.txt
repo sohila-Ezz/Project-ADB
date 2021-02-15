@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `filter_with_price`(IN mn_price int,IN mx_price int)
+BEGIN
+select *
+from products
+where productPrice>=mn_price&&productPrice<=mx_price;
+END
+
+/*دا rangeبتاخد اقل سعر واكبر سعر عايزه اليوزر و تعرض المنتجات اللى ف الfilterationدى بتعمل procedureال*/

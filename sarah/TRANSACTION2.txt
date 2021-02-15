@@ -1,0 +1,12 @@
+START TRANSACTION;
+SELECT @categoryNumber:=MAX(id)+1 FROM category;
+INSERT INTO category(id,categoryName,categoryDescription,creationDate,updationDate)
+VALUES(@categoryNumber,
+       'accessories',
+       'charger-headphones',
+       '2017-01-24 21:17:37',
+       '30-01-2017 12:22:24 AM');
+COMMIT;
+
+
+/* لصف جديدinsert بعد ما اعمل category بيزوده بواحد  فى جدول idدا بيعدل فى ال transactionال*/

@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `online shopping`.`Insert_Log` AFTER INSERT ON `user_info` FOR EACH ROW
+BEGIN
+INSERT INTO logs VALUES(null, NEW.user_id,'inserte' ,NOW())
+
+END
+
+
+/* user_infoلصف ف جدول ال insertبعد ال insert logدا بيعدل ف جدول الtriggerال*/

@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `Hello`(s char(20)) 
+BEGIN
+
+RETURN concat ('Hello admin' ,s,'!')
+
+END

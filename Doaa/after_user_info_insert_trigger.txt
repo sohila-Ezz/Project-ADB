@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `after_user_info_insert` AFTER INSERT ON `user_info` FOR EACH ROW
+
+BEGIN 
+INSERT INTO user_info_backup VALUES(new.user_id,new.first_name,new.last_name,new.email,new.password,new.mobile,new.address1,new.address2);
+END
+
+
+/* بيجمع اللي كلنوا مسجلين واعادو التسجيل مرة اخري user_infoلصف ف جدول ال insertبعد ال user_info_backupدا بيعدل ف جدول الtriggerال*/
